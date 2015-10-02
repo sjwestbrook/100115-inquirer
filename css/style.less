@@ -1,0 +1,208 @@
+/*
+  Baker Street Inquirer - A Flexible Grid
+  10-1-15
+*/
+
+* {
+  outline: 1px dotted red;
+}
+
+/* VARIABLES, MIXINS, FUNCTIONS */
+@fontfamily: Cambria, Georgia, serif;
+@fontsize: 16px;
+@linkcolor: #890101;
+@hovercolor: #DF3030;
+@fontfamily2: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Ties New Roman", serif;
+
+/* GLOBAL STYLES */
+
+.section:after, ul.nav:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+
+
+body {
+  background: #E4E4E4 url("../images/bg.png");
+  background-size: auto;
+  color: #292929;
+  font-weight: normal;
+  font-family: @fontfamily;
+  font-size: @fontsize;
+  text-shadow: 0 1px 0 rgba(225, 225, 225, 0.8);
+}
+
+a {
+  color: @linkcolor;
+  text-decoration: none;
+  transition: 0.2s color linear;
+
+    &:hover {
+      color: @hovercolor;
+    }
+}
+
+#page {
+  background: url("../images/rag.png") repeat-x;
+  padding: 2em 0;
+}
+
+.inner {
+  margin: 0 auto;
+  width: 93.75%;
+}
+
+.img {
+  max-width: 100%;
+}
+
+.amp {
+  font-family: @fontfamily2;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.mast {
+  float: left;
+  width: 31.875%;
+}
+
+h1 {
+  background: url('../images/logo-bg.png') no-repeat 50% 0;
+  
+  a {
+    padding-top: 117px;
+    height: 162px;
+    display: block;
+    text-align: center;
+  }
+}
+
+.intro, .main, .footer {
+  float: right;
+  width: 65.9375%;
+}
+
+ul {
+  .nav {
+    border-top: 1px solid #888583;
+    margin: 2em auto 0;
+    width: 64.379;
+    
+    .a {
+      background: url("../images/ornament.png") no-repeat 0 100%;
+      font: bold 14px/1.2 @fontfamily2;
+      display: block;
+      text-align: center;
+      letter-spacing: 0.1em;
+      padding: 1em 0.5em 3em;
+      margin-bottom: -1em;
+      text-transform: uppercase;
+      
+      &:hover {
+        background-position: 50% 50%;
+      }
+    }
+    
+    i {
+      font: normal 10px @fontfamily2;
+      disiplay: block;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+li {
+  .first a {
+    border-top: 1px solid #FFF9EF;
+    padding-top: 1.25em;
+  }
+}
+
+.intro {
+  margin-top: 117px;
+  
+//  div {
+//    line-height: 1.4;
+//  }
+  
+  h2 {
+    font: normal 2em @fontfamily2;
+    text-align: center;
+    margin-bottom: -20px;
+  }
+  
+  p {
+    font-size: @fontsize * 1.2;
+    line-height: 1.3em;
+    margin-top: -30px;
+    text-align: left;
+  }
+}
+
+.main h2 {
+  font-size: 1.4em;
+  text-transform: lowercase;
+  text-align: center;
+  margin: 0.75em 0 1em;
+  
+  b {
+    background: url("../images/bg.png");
+    font-weight: normal;
+    padding: 0 1em;
+  }
+}
+
+.figure {
+  float: left;
+  float-size: 10px;
+  line-height: 1.1;
+  margin: 0 3.317535545023696682% 1.5em 0; 
+  text-align: center;
+  width: 31.1216429984202211%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  
+  b {
+    display: block;
+    font-size: 14px;
+    font-family: @fontfamily2;
+    letter-spacing: 0.1em;
+  }
+  
+  a img {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: block;
+    margin: 0 auto 1em;
+  }
+}
+
+li#mycroft, li#winter {
+  margin-right: 0;
+}
+
+.footer {
+  background: url("../images/ornament.png") 50% 0 repeat-x;
+  text-align: center;
+  padding: 40px 0 20px;
+  
+  p {
+    font-size: @fontsize;
+    font-style: normal;
+    margin-bottom: 0.5em;
+  }
+}
+
+
+
+
+/*
+  The CSS ::after pseudo-**element** matches a virtual last child of the selected element.
+  It is typically used to add cosmetic content to an element by using the content CSS property.
+  ":after" -- with one ':' -- is a pseudo-class.
+*/

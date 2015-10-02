@@ -3,9 +3,9 @@
   10-1-15
 */
 
-//* {
-//  outline: 1px dotted red;
-//}
+// * {
+//   outline: 1px dotted red;
+// }
 
 /* VARIABLES, MIXINS, FUNCTIONS */
 @fontfamily: Cambria, Georgia, serif;
@@ -27,13 +27,13 @@
 
 .right-position {
 	float: right;
-	width: 65.9375%;	
+	width: 65.9375%;
 }
 
 
 /* GLOBAL STYLES */
 
-
+// ??
 .section:after, ul.nav:after {
 	content: ".";
 	display: block;
@@ -58,10 +58,8 @@ body {
 
 .inner {
 	margin: 0 auto;
-	width: 93.75%;		
+	width: 93.75%;
 }
-
-
 
 a {
 	.links
@@ -72,7 +70,7 @@ img {
 }
 
 
-/* MISC STYLES */ 
+/* MISC STYLES */
 .amp {
 	font-family: @fontfamily2;
 	font-style: italic;
@@ -82,19 +80,21 @@ img {
 
 
 .intro, .main, .footer {
-	.right-position;	
+	.right-position;
 }
 
 
-/* HEADER (LEFT/TOP) STYLES */
+/* HEADER/MAST STYLES */
 .mast {
 	float: left;
-	width: 31.875%;
+	width: 31%;
+  //width: 31.875%;
 }
 
 h1 {
 	background: url("../images/logo-bg.png") no-repeat 50% 0;
-  
+
+  // image link
   a {
     padding-top: 117px;
     height: 162px;
@@ -107,9 +107,12 @@ ul.nav {
 	border-top: 1px solid #888583;
 	margin: 2em auto 0;
 	width: 64.379%;
-  
+  //width: 64.379%;
+
+  // background image doesn't work
   a {
     background: url("../images/ornament.png") no-repeat 0 100%;
+    // style   size/line-height    family
     font: bold 14px/1.2 @fontfamily2;
     display: block;
     text-align: center;
@@ -118,10 +121,10 @@ ul.nav {
     margin-bottom: -1em;
     text-transform: uppercase;
   }
-  
+
   &:hover {
     background-position: 50% 100%;
-  }  
+  }
 }
 
 li.first a {
@@ -142,23 +145,23 @@ ul.nav em {
 
 .intro {
 	margin-top: 117px;
-  
+
   div {
     line-height: 1.4;
   }
-  
+
   h2 {
     font: normal 2em @fontfamily2;
     text-align: center;
     margin-bottom: 0.25em;
   }
-  
+
   p {
     font-size: @fontsize;
     margin: 10px 0;
     text-align: left;
   }
-  
+
 }
 
 
@@ -170,7 +173,7 @@ ul.nav em {
 	text-transform: lowercase;
 	text-align: center;
 	margin: 0.75em 0 1em;
-  
+
   b {
     background: url("../images/bg.png");
     font-weight: normal;
@@ -182,9 +185,11 @@ ul.nav em {
 	float: left;
 	font-size: 10px;
 	line-height: 1.1;
-	margin: 0 3.317535545023696682% 1.5em 0;			 
+	margin: 0 3% 1.5em 0;
+  //margin: 0 3.317535545023696682% 1.5em 0;
 	text-align: center;
-	width: 31.121642969984202211%;				
+	//width: 31.121642969984202211%;
+  width: 31%;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 }
@@ -230,21 +235,21 @@ li#mycroft, li#winter {
 	.inner {
 		position: relative;
 	}
-  
+
 	.mast, .intro,.main, .footer {
 		float: none;
 		width: auto;
 	}
-  
+
 	h1 {
 		background: none;
-    
+
     a {
       padding-top: 70px;
       height: 87px;
     }
 	}
-  
+
 	ul.nav {
 		background: url("../images/ornament.png") no-repeat 0 -20px;
 		border-top: none;
@@ -252,17 +257,19 @@ li#mycroft, li#winter {
 		position: absolute;
 		top: 0;
 		width: 100%;
-    
+
     li {
       float: left;
-      margin-right: 3.317535545023696682%;	
-      width: 31.121642969984202211%;		
+      margin-right: 3%;
+      width: 31%;
+//      margin-right: 3.317535545023696682%;
+//      width: 31.121642969984202211%;
     }
-    
-    
-    
+
+
+
 	}
-	 
+
 	ul.nav a,
 	ul.nav i {
 		font: 10px @fontfamily3;
@@ -292,8 +299,10 @@ li#mycroft, li#winter {
 @media (max-width: 400px) {
 	.figure,
 	li#mycroft {
-		margin-right: 3.317535545023696682%;	
-		width: 48.341232227488151658%;	
+		margin-right: 3%;
+		width: 48%;
+//    margin-right: 3.317535545023696682%;
+//		width: 48.341232227488151658%;
 	}
 	li#watson,
 	li#moriarty {
@@ -308,52 +317,58 @@ li#mycroft, li#winter {
 		float: none;
 		width: auto;
 	}
-  
+
 	h1 {
 		float: left;
-		width: 31.875%;	
+		width: 31.875%;
 	}
-  
+
 	ul.nav {
 		float: right;
 		margin: 40px 0 1em;
 		text-align: center;
-		width: 65.9375%;	
+		width: 65.9375%;
 	}
-  
+
 	ul.nav {
 		border-top: none;
 	}
-  
+
 	ul.nav li.first a {
 		border-top: none;
 		padding-top: 1em;
 	}
-  
+
 	ul.nav li {
 		float: left;
-		margin-right: 3.317535545023696682%;			
-		width: 31.121642969984202211%;				
+		margin-right: 3%;
+		width: 31%;
+//    margin-right: 3.317535545023696682%;
+//		width: 31.121642969984202211%;
 	}
-  
+
 	ul.nav li.last {
 		margin-right: 0;
 	}
-  
+
 	.intro {
 		margin-top: 1em;
 	}
-  
+
 	.figure,	li#mycroft {
-		margin-right: 3.317535545023696682%;			
-		width: 13.902053712480252764%;				
+		margin-right: 3%;
+		width: 13.9%;
+//    margin-right: 3.317535545023696682%;
+//		width: 13.902053712480252764%;
 	}
-  
+
 	.footer {
 		clear: both;
 		float: none;
-		margin-left: 56.770833333333333333%;			
-		width: 20.520833333333333333%;				
+		margin-left: 56.7%;
+		width: 20.5%;
+//    margin-left: 56.770833333333333333%;
+//		width: 20.520833333333333333%;
 	}
 }
 

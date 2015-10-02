@@ -3,40 +3,19 @@
   10-1-15
 */
 
-* {
-  outline: 1px dotted red;
-}
+//* {
+//  outline: 1px dotted red;
+//}
 
 /* VARIABLES, MIXINS, FUNCTIONS */
 @fontfamily: Cambria, Georgia, serif;
+@fontfamily2: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Ties New Roman", serif;
+@fontfamily3: 10px Helvetica, Arial, sans-serif;
 @fontsize: 16px;
 @linkcolor: #890101;
 @hovercolor: #DF3030;
-@fontfamily2: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Ties New Roman", serif;
 
-/* GLOBAL STYLES */
-
-.section:after, ul.nav:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-
-
-body {
-  background: #E4E4E4 url("../images/bg.png");
-  background-size: auto;
-  color: #292929;
-  font-weight: normal;
-  font-family: @fontfamily;
-  font-size: @fontsize;
-  text-shadow: 0 1px 0 rgba(225, 225, 225, 0.8);
-}
-
-a {
+.links {
   color: @linkcolor;
   text-decoration: none;
   transition: 0.2s color linear;
@@ -46,33 +25,75 @@ a {
     }
 }
 
-#page {
-  background: url("../images/rag.png") repeat-x;
-  padding: 2em 0;
+.right-position {
+	float: right;
+	width: 65.9375%;	
 }
+
+
+/* GLOBAL STYLES */
+
+
+.section:after, ul.nav:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+body {
+	background: #E4E4E4 url("../images/bg.png");
+	color: #292929;
+	color: rgba(0, 0, 0, 0.82);
+	font: normal 100% @fontfamily;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+#page {
+	background: url("../images/rag.png") repeat-x;
+	padding: 2em 0;
+}
+
 
 .inner {
-  margin: 0 auto;
-  width: 93.75%;
+	margin: 0 auto;
+	width: 93.75%;		
 }
 
-.img {
-  max-width: 100%;
+
+
+a {
+	.links
 }
 
+img {
+	max-width: 100%;
+}
+
+
+/* MISC STYLES */ 
 .amp {
-  font-family: @fontfamily2;
-  font-style: italic;
-  font-weight: normal;
+	font-family: @fontfamily2;
+	font-style: italic;
+	font-weight: normal;
 }
 
+
+
+.intro, .main, .footer {
+	.right-position;	
+}
+
+
+/* HEADER (LEFT/TOP) STYLES */
 .mast {
-  float: left;
-  width: 31.875%;
+	float: left;
+	width: 31.875%;
 }
 
 h1 {
-  background: url('../images/logo-bg.png') no-repeat 50% 0;
+	background: url("../images/logo-bg.png") no-repeat 50% 0;
   
   a {
     padding-top: 117px;
@@ -82,73 +103,73 @@ h1 {
   }
 }
 
-.intro, .main, .footer {
-  float: right;
-  width: 65.9375%;
+ul.nav {
+	border-top: 1px solid #888583;
+	margin: 2em auto 0;
+	width: 64.379%;
+  
+  a {
+    background: url("../images/ornament.png") no-repeat 0 100%;
+    font: bold 14px/1.2 @fontfamily2;
+    display: block;
+    text-align: center;
+    letter-spacing: 0.1em;
+    padding: 1em 0.5em 3em;
+    margin-bottom: -1em;
+    text-transform: uppercase;
+  }
+  
+  &:hover {
+    background-position: 50% 100%;
+  }  
 }
 
-ul {
-  .nav {
-    border-top: 1px solid #888583;
-    margin: 2em auto 0;
-    width: 64.379;
-    
-    .a {
-      background: url("../images/ornament.png") no-repeat 0 100%;
-      font: bold 14px/1.2 @fontfamily2;
-      display: block;
-      text-align: center;
-      letter-spacing: 0.1em;
-      padding: 1em 0.5em 3em;
-      margin-bottom: -1em;
-      text-transform: uppercase;
-      
-      &:hover {
-        background-position: 50% 50%;
-      }
-    }
-    
-    i {
-      font: normal 10px @fontfamily2;
-      disiplay: block;
-      letter-spacing: 0.05em;
-    }
-  }
+li.first a {
+	border-top: 1px solid #FFF9EF;
+	padding-top: 1.25em;
 }
 
-li {
-  .first a {
-    border-top: 1px solid #FFF9EF;
-    padding-top: 1.25em;
-  }
+ul.nav em {
+	font: normal 10px @fontfamily2;
+	display: block;
+	letter-spacing: 0.05em;
 }
+
+
+
+
+/* INTRO STYLES */
 
 .intro {
-  margin-top: 117px;
+	margin-top: 117px;
   
-//  div {
-//    line-height: 1.4;
-//  }
+  div {
+    line-height: 1.4;
+  }
   
   h2 {
     font: normal 2em @fontfamily2;
     text-align: center;
-    margin-bottom: -20px;
+    margin-bottom: 0.25em;
   }
   
   p {
-    font-size: @fontsize * 1.2;
-    line-height: 1.3em;
-    margin-top: -30px;
+    font-size: @fontsize;
+    margin: 10px 0;
     text-align: left;
   }
+  
 }
 
+
+/* MAIN STYLES */
+
 .main h2 {
-  font-size: 1.4em;
-  text-transform: lowercase;
-  text-align: center;
-  margin: 0.75em 0 1em;
+	background: url("../images/ornament.png") no-repeat 0 50%;
+	font-size: 1.4em;
+	text-transform: lowercase;
+	text-align: center;
+	margin: 0.75em 0 1em;
   
   b {
     background: url("../images/bg.png");
@@ -158,46 +179,183 @@ li {
 }
 
 .figure {
-  float: left;
-  float-size: 10px;
-  line-height: 1.1;
-  margin: 0 3.317535545023696682% 1.5em 0; 
-  text-align: center;
-  width: 31.1216429984202211%;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  
-  b {
-    display: block;
-    font-size: 14px;
-    font-family: @fontfamily2;
-    letter-spacing: 0.1em;
-  }
-  
-  a img {
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    display: block;
-    margin: 0 auto 1em;
-  }
+	float: left;
+	font-size: 10px;
+	line-height: 1.1;
+	margin: 0 3.317535545023696682% 1.5em 0;			 
+	text-align: center;
+	width: 31.121642969984202211%;				
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.figure b {
+	display: block;
+	font-size: 14px;
+	font-family: @fontfamily;
+	letter-spacing: 0.1em;
+}
+
+.figure img {
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	display: block;
+	margin: 0 auto 1em;
 }
 
 li#mycroft, li#winter {
-  margin-right: 0;
+	margin-right: 0;
 }
+
+
+
+/* FOOTER STYLES */
 
 .footer {
-  background: url("../images/ornament.png") 50% 0 repeat-x;
-  text-align: center;
-  padding: 40px 0 20px;
-  
-  p {
-    font-size: @fontsize;
-    font-style: normal;
-    margin-bottom: 0.5em;
-  }
+	background: url("../images/ornament.png") 50% 0 repeat-x;
+	font-size: 12px;
+	text-align: center;
+	padding: 40px 0 20px;
 }
 
+.footer p {
+	margin-bottom: 0.5em;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+	.inner {
+		position: relative;
+	}
+  
+	.mast, .intro,.main, .footer {
+		float: none;
+		width: auto;
+	}
+  
+	h1 {
+		background: none;
+    
+    a {
+      padding-top: 70px;
+      height: 87px;
+    }
+	}
+  
+	ul.nav {
+		background: url("../images/ornament.png") no-repeat 0 -20px;
+		border-top: none;
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		width: 100%;
+    
+    li {
+      float: left;
+      margin-right: 3.317535545023696682%;	
+      width: 31.121642969984202211%;		
+    }
+    
+    
+    
+	}
+	 
+	ul.nav a,
+	ul.nav i {
+		font: 10px @fontfamily3;
+		letter-spacing: 0;
+	}
+	ul.nav a:hover,
+	ul.nav a:focus {
+		background-position: 0 100%;
+	}
+	li.first a {
+		border-top: none;
+		padding-top: 1em;
+	}
+	ul.nav li.last {
+		margin-right: 0;
+	}
+	.intro {
+		margin-top: 0;
+	}
+	.intro h2 {
+		font-size: 1.4em;
+	}
+}
+
+
+
+@media (max-width: 400px) {
+	.figure,
+	li#mycroft {
+		margin-right: 3.317535545023696682%;	
+		width: 48.341232227488151658%;	
+	}
+	li#watson,
+	li#moriarty {
+		margin-right: 0;
+	}
+}
+
+
+
+@media (min-width: 1300px) {
+	.mast {
+		float: none;
+		width: auto;
+	}
+  
+	h1 {
+		float: left;
+		width: 31.875%;	
+	}
+  
+	ul.nav {
+		float: right;
+		margin: 40px 0 1em;
+		text-align: center;
+		width: 65.9375%;	
+	}
+  
+	ul.nav {
+		border-top: none;
+	}
+  
+	ul.nav li.first a {
+		border-top: none;
+		padding-top: 1em;
+	}
+  
+	ul.nav li {
+		float: left;
+		margin-right: 3.317535545023696682%;			
+		width: 31.121642969984202211%;				
+	}
+  
+	ul.nav li.last {
+		margin-right: 0;
+	}
+  
+	.intro {
+		margin-top: 1em;
+	}
+  
+	.figure,	li#mycroft {
+		margin-right: 3.317535545023696682%;			
+		width: 13.902053712480252764%;				
+	}
+  
+	.footer {
+		clear: both;
+		float: none;
+		margin-left: 56.770833333333333333%;			
+		width: 20.520833333333333333%;				
+	}
+}
 
 
 
